@@ -83,7 +83,10 @@ function doiCho(number1, number2, listNumber) {
     var result = '';
     //xử lý
     for (var index = 0; index < listNumber.length; index++) {
-        listNumber = ([listNumber[number1], listNumber[number2]] = [listNumber[number2], listNumber[number1]]);
+        // listNumber = ([listNumber[number1], listNumber[number2]] = [listNumber[number2], listNumber[number1]]);
+        const tmp = listNumber[0];
+        listNumber[number1] = listNumber[number2];
+        listNumber[number2] = tmp;
         result = "Mảng sau khi đổi :" + listNumber;
         break;
     }
